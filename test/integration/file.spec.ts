@@ -6,7 +6,7 @@ import { DEFAULT_MAX_PAYLOAD_SIZE } from '../../src/chunk'
 import { bytesToHex } from '../../src/utils'
 
 const beeUrl = process.env.BEE_API_URL || 'http://localhost:1633'
-const bee = new Bee(beeUrl)
+const bee = new Bee(beeUrl, { timeout: 60000 })
 const stamp = process.env.BEE_POSTAGE
 if (!stamp) {
   throw new Error('BEE_POSTAGE system environment variable is not defined')
