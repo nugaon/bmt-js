@@ -32,11 +32,13 @@ export default async (): Promise<Config.InitialOptions> => {
     projects: [
       {
         displayName: 'node:unit',
+        preset: 'ts-jest',
         testEnvironment: 'node',
         testRegex: 'test/unit/((?!\\.browser).)*\\.spec\\.ts',
       },
       {
         displayName: 'node:integration',
+        preset: 'ts-jest',
         testEnvironment: 'node',
         testRegex: 'test/integration/((?!\\.browser).)*\\.spec\\.ts',
         globalSetup: '<rootDir>/test/test-setup.ts',
