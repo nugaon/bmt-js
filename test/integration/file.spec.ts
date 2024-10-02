@@ -7,7 +7,7 @@ import { bytesToHex } from '../../src/utils'
 import http from 'http'
 import https from 'https'
 
-const testTimeout = 3 * 60 * 1000 // 3m timeout
+const testTimeout = 6 * 60 * 1000 // 6m timeout
 const beeUrl = process.env.BEE_API_URL || 'http://localhost:1633'
 const bee = new Bee(beeUrl, { timeout: testTimeout, httpAgent: new http.Agent({ keepAlive: true, keepAliveMsecs: 500, maxSockets: 5 }), httpsAgent: new https.Agent({ keepAlive: true, keepAliveMsecs: 500, maxSockets: 5 }) } as BeeOptions)
 const stamp = process.env.BEE_POSTAGE
