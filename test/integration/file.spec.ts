@@ -1,12 +1,14 @@
-import { Bee, SPAN_SIZE } from '@ethersphere/bee-js'
+import { Bee, BeeOptions, SPAN_SIZE } from '@ethersphere/bee-js'
 import FS from 'fs'
 import path from 'path'
 import { makeChunkedFile } from '../../src'
 import { DEFAULT_MAX_PAYLOAD_SIZE } from '../../src/chunk'
 import { bytesToHex } from '../../src/utils'
+import http from 'http'
+import https from 'https'
 
 const beeUrl = process.env.BEE_API_URL || 'http://localhost:1633'
-const bee = new Bee(beeUrl, { timeout: 120000 })
+const bee = new Bee(beeUrl, { timeout: 120000, httpAgent: new http.Agent({ keepAlive: true }), httpsAgent: new https.Agent({ keepAlive: true }) } as BeeOptions)
 const stamp = process.env.BEE_POSTAGE
 if (!stamp) {
   throw new Error('BEE_POSTAGE system environment variable is not defined')
@@ -64,5 +66,5 @@ describe('file', () => {
     const beeResult = await bee.uploadData(stamp, fileBytes)
     const chunkedFile = makeChunkedFile(fileBytes)
     expect(bytesToHex(chunkedFile.address(), 64)).toBe(beeResult.reference)
-  }, 60000) // 60s timeout
+  }, 120000) // 2m timeout
 })
