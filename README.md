@@ -1,3 +1,8 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Tests](https://github.com/nugaon/bmt-js/workflows/CI/badge.svg)
+![Build Status](https://github.com/nugaon/bmt-js/workflows/check.yaml/badge.svg)
+![npm](https://img.shields.io/npm/v/@nugaon/bmt-js)
+
 # BMT-JS
 
 This JavaScript library does [Binary Merkle Tree](https://en.wikipedia.org/wiki/Merkle_tree) (BMT) operations on data.
