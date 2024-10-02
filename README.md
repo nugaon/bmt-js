@@ -17,7 +17,7 @@ First, it splits the data into `chunks` that have maximum 4KB payload by default
 If the payload byte length cannot fit exactly to this chunk division, the rightmost chunk's data will be padded with zeros in order to have fixed length data for the BMT operations.
 
 This basic unit is also required to effectively distribute data on decentralized storage systems with regard to _plausible deniability_, _garbage collection_, _load balancing_ and else. 
-For more details, please visit [Etherem Swarm]() webpage that has full implementation of this logic.
+For more details, please visit [Etherem Swarm](https://www.ethswarm.org/) webpage that has full implementation of this logic.
 
 The used hashing algorithm is the `keccak256` function that results in a 32 bytes long `segment`.
 
@@ -112,7 +112,7 @@ The testing needs running Bee client node for integration testing.
 You can set `BEE_POSTAGE` environment variable with a valid Postage batch or the test will create one for you.
 
 The default value of the Bee Debug API endpoint is `http://localhost:1635`. 
-If your address diverges from that, please, set `BEE_DEBUG_API_URL` system environment variable with yours.
+If your address diverges from that, please, set `BEE_API_URL` system environment variable with yours.
 
 To run test execute
 
