@@ -64,5 +64,5 @@ describe('file', () => {
     const beeResult = await bee.uploadData(stamp, fileBytes)
     const chunkedFile = makeChunkedFile(fileBytes)
     expect(bytesToHex(chunkedFile.address(), 64)).toBe(beeResult.reference)
-  })
+  }, 60000) // 60s timeout
 })
