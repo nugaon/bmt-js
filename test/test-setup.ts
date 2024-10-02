@@ -11,8 +11,7 @@ export default async function testsSetup(): Promise<void> {
       console.log('Creating postage stamps...')
       const beeDebugUrl = process.env.BEE_API_URL || 'http://localhost:1633'
       const beeDebug = new Bee(beeDebugUrl)
-      process.env.BEE_POSTAGE = await beeDebug.createPostageBatch('1', 22)
-      console.log(`export BEE_API_URL=${beeDebugUrl}`)
+      process.env.BEE_POSTAGE = await beeDebug.createPostageBatch('414720000', 22)
       //wait for chunk to be usable
       let postageBatch: PostageBatch
       do {
