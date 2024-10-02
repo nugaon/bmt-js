@@ -1,6 +1,6 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Tests](https://github.com/nugaon/bmt-js/workflows/CI/badge.svg)
-![Build Status](https://github.com/nugaon/bmt-js/workflows/check.yaml/badge.svg)
+[![Tests](https://github.com/nugaon/bmt-js/actions/workflows/test.yaml/badge.svg)](https://github.com/nugaon/bmt-js/actions/workflows/test.yaml)
+[![Build Status](https://github.com/nugaon/bmt-js/actions/workflows/check.yaml/badge.svg)](https://github.com/nugaon/bmt-js/actions/workflows/test.yaml)
 ![npm](https://img.shields.io/npm/v/@nugaon/bmt-js)
 
 # BMT-JS

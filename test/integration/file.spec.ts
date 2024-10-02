@@ -7,8 +7,9 @@ import { bytesToHex } from '../../src/utils'
 import http from 'http'
 import https from 'https'
 
+const testTimeout = 3 * 60 * 1000 // 3m timeout
 const beeUrl = process.env.BEE_API_URL || 'http://localhost:1633'
-const bee = new Bee(beeUrl, { timeout: 120000, httpAgent: new http.Agent({ keepAlive: true }), httpsAgent: new https.Agent({ keepAlive: true }) } as BeeOptions)
+const bee = new Bee(beeUrl, { timeout: testTimeout, httpAgent: new http.Agent({ keepAlive: true }), httpsAgent: new https.Agent({ keepAlive: true }) } as BeeOptions)
 const stamp = process.env.BEE_POSTAGE
 if (!stamp) {
   throw new Error('BEE_POSTAGE system environment variable is not defined')
@@ -66,5 +67,5 @@ describe('file', () => {
     const beeResult = await bee.uploadData(stamp, fileBytes)
     const chunkedFile = makeChunkedFile(fileBytes)
     expect(bytesToHex(chunkedFile.address(), 64)).toBe(beeResult.reference)
-  }, 120000) // 2m timeout
+  }, testTimeout)
 })
