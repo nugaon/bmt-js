@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.0.1](https://www.github.com/nugaon/bmt-js/compare/v3.0.0...v3.0.1) (2024-10-03)
+
+
+### Bug Fixes
+
+* add js-sha3 to the deps ([ab089a9](https://www.github.com/nugaon/bmt-js/commit/ab089a9d465fae16896964426ce044bc970119cb))
+
 ## [3.0.0](https://www.github.com/nugaon/bmt-js/compare/v2.1.0...v3.0.0) (2024-10-03)
 
 
