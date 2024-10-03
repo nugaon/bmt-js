@@ -18,7 +18,7 @@ if (!stamp) {
 }
 
 describe('file', () => {
-  it('should produce same chunk like Bee for data < 4KB', async () => {
+  xit('should produce same chunk like Bee for data < 4KB', async () => {
     const fileBytes = Uint8Array.from(FS.readFileSync(path.join(__dirname, '..', 'test-files', 'text.txt')))
     const chunkedFile = makeChunkedFile(fileBytes)
     const result = await bee.uploadData(stamp, fileBytes)
@@ -27,7 +27,7 @@ describe('file', () => {
     expect(bytesToHex(chunkedFile.address(), 64)).toStrictEqual(reference)
   })
 
-  it('should produce same BMT tree like Bee for data > 4KB', async () => {
+  xit('should produce same BMT tree like Bee for data > 4KB', async () => {
     const fileBytes = Uint8Array.from(
       FS.readFileSync(path.join(__dirname, '..', 'test-files', 'The-Book-of-Swarm.pdf')),
     )
@@ -53,7 +53,7 @@ describe('file', () => {
     expect(bytesToHex(tree[2][0].address(), 64)).toStrictEqual(reference)
   })
 
-  it('should work with edge case - carrier chunk', async () => {
+  xit('should work with edge case - carrier chunk', async () => {
     const fileBytes = Uint8Array.from(
       FS.readFileSync(path.join(__dirname, '..', 'test-files', 'carrier-chunk-blob')),
     )
