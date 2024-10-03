@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.0.2](https://www.github.com/nugaon/bmt-js/compare/v3.0.1...v3.0.2) (2024-10-03)
+
+
+### Bug Fixes
+
+* main and types in package.json ([af62224](https://www.github.com/nugaon/bmt-js/commit/af6222431dcf6ca556ee7330da6b195fa8467ff7))
+
 ### [3.0.1](https://www.github.com/nugaon/bmt-js/compare/v3.0.0...v3.0.1) (2024-10-03)
 
 
