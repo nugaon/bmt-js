@@ -3,7 +3,7 @@
   "version": "3.0.1",
   "description": "Binary Merkle Tree operations on data",
   "main": "dist/index.js",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/nugaon/bmt-js.git"
