@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.0.0](https://www.github.com/nugaon/bmt-js/compare/v2.1.0...v3.0.0) (2024-10-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* everything works
+
+### Features
+
+* everything works ([5556a24](https://www.github.com/nugaon/bmt-js/commit/5556a2480fc89194cee1618ec8eb4705349c17a5))
+* let's roll ([4fe3c70](https://www.github.com/nugaon/bmt-js/commit/4fe3c7074f91ef33b41361f636f6dd7ab92464ac))
+* update packages ([023d9c7](https://www.github.com/nugaon/bmt-js/commit/023d9c7f4af1689804637a081327b765fa947158))
+
+
+### Bug Fixes
+
+* test setup ([f317a8c](https://www.github.com/nugaon/bmt-js/commit/f317a8c15ee1437e37dcab3880035be6aa935936))
+* ts-jest ([2c541d6](https://www.github.com/nugaon/bmt-js/commit/2c541d650c4ca0f69732f8deae7436d3c72271fc))
+
 ## [2.1.0](https://www.github.com/fairDataSociety/bmt-js/compare/v2.0.1...v2.1.0) (2023-07-05)
 
 
