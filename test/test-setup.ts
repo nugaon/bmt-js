@@ -15,12 +15,12 @@ export default async function testsSetup(): Promise<void> {
       //wait for chunk to be usable
       let postageBatch: PostageBatch
       do {
-        postageBatch = await beeDebug.getPostageBatch(beeDebugUrl)
+        postageBatch = await beeDebug.getPostageBatch(process.env.BEE_POSTAGE)
 
         console.log('Waiting 1 sec for batch ID settlement...')
         await sleep()
       } while (!postageBatch.usable)
-      console.log(`export BEE_POSTAGE=${postageBatch.batchID}`)
+      console.log(`export BEE_POSTAGE=${process.env.BEE_POSTAGE}`)
     } catch (e) {
       // It is possible that for unit tests the Bee nodes does not run
       // so we are only logging errors and not leaving them to propagate
